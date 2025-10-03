@@ -2,8 +2,8 @@
 
 :root {
     --background: #232829;
-    --foreground: #FFFFFF;
-    --primary: #FDB056;
+    --foreground: #ffffff;
+    --primary: #fdb056;
 }
 
 @theme inline {
@@ -19,4 +19,3 @@ body {
     font-family: Montserrat, Helvetica, sans-serif;
     font-size: 20px;
 }
-
