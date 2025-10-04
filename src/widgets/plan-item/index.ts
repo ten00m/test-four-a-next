@@ -1,1 +1,1 @@
-export {PlanItem as default} from './ui/plan-item'
+export { PlanItem as default } from './ui/plan-item'

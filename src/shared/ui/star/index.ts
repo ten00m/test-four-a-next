@@ -1,1 +1,1 @@
-export {Star as default} from './star'
+export { Star as default } from './star'
