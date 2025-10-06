@@ -1,1 +1,1 @@
-export type {IPlans} from './plan'
+export type {IPlan} from './plan'
