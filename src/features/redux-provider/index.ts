@@ -1,0 +1,1 @@
+export {ReduxProvider as default} from './model/reduxt-provider'
