@@ -1,0 +1,1 @@
+export {useGetPlansQuery} from './api/plans-api'
