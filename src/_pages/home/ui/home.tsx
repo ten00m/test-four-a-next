@@ -1,5 +1,4 @@
 import Header from '@/src/widgets/header'
-import PlanItem from '@/src/widgets/plan-item'
 import Layout from '@/src/_pages/home/ui/layout'
 import Content from '@/src/_pages/home/ui/content'
 
