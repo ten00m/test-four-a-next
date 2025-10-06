@@ -6,7 +6,8 @@ interface IPlanItemProps {
     period: string
     id: string
     isBest: boolean
-    text: string
+    text: string,
+    basis: string;
 }
 
 export const PlanItem: FC<IPlanItemProps> = ({
@@ -16,40 +17,41 @@ export const PlanItem: FC<IPlanItemProps> = ({
     isBest,
     text,
     id,
+    basis,
 }) => {
     const sell =
         Math.round(((fullPrice - price) / fullPrice) * 10) * 10
 
     return (
         <div
-            style={{ borderColor: isBest ? '#FDB056' : '#484D4E' }}
+            style={{ borderColor: isBest ? '#FDB056' : '#484D4E', flexBasis: basis }}
             className="relative flex shrink-0 basis-[100%] flex-row justify-between rounded-[1.25rem] border-[0.125rem] bg-[#313637] p-5"
         >
-            <div className="flex flex-col items-start gap-3">
+            <div className="flex flex-col items-start text-nowrap gap-3">
                 {period}
                 <div className="flex flex-col items-end">
                     <span
                         style={{ color: isBest ? '#FDB056' : '#fff' }}
-                        className="h-[30px] text-[30px] leading-[30px] font-semibold"
+                        className="h-[30px] text-[30px] leading-[30px] font-semibold text-nowrap"
                     >
-                        {price}
+                        {price} ₽
                     </span>
                     <span className="relative text-[#919191]">
-                        {fullPrice}
+                        {fullPrice} ₽
                         <div className="absolute top-[calc(50%-1.14px)] w-[100%] rounded-[1px] border-[0.5px] border-[#919191]"></div>
                     </span>
                 </div>
             </div>
-            <div>{text}</div>
+            <div className="ml-[30px] mt-[20px] flex basis-[55%]  text-[14px]">
+                {text}
+            </div>
             <div className="absolute top-[-2px] right-0 flex flex-row rounded-b-[12px]">
                 <div className="rounded-b-[12px] bg-[#FD5656] px-1.5 py-[3px]">
                     {-sell}%
                 </div>
-                {isBest && (
                     <span className="mx-[14px] text-[#FDB056]">
-                        хит!
+                        {isBest ? 'хит!' : ''}
                     </span>
-                )}
             </div>
         </div>
     )
