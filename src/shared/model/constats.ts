@@ -1,1 +1,1 @@
-export const API_URL = "https://t-core.fit-hub.pro"
+export const API_URL = "https://t-core.fit-hub.pro/Test"
