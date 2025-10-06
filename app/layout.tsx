@@ -1,4 +1,5 @@
 import './globals.css'
+import ReduxProvider from "@/src/features/redux-provider";
 
 export default function RootLayout({
     children,
@@ -7,7 +8,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`antialiased`}>{children}</body>
+            <body className={`antialiased`}>
+                <ReduxProvider>
+                    {children}
+                </ReduxProvider>
+            </body>
         </html>
     )
 }
