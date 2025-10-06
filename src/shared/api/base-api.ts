@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import {API_URL} from "@/src/shared/model/constats";
 
 export interface BaseResponse<T = unknown> {
     data: T
@@ -9,7 +10,7 @@ export interface BaseResponse<T = unknown> {
 export const baseApi = createApi({
     reducerPath: 'baseApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+        baseUrl: API_URL,
         prepareHeaders: (headers) => {
             const token = localStorage.getItem('token')
             if (token) {
